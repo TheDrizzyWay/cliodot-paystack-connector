@@ -33,7 +33,6 @@ export class PaystackInitializeWorkflow {
       fields: [v.body("amount")],
       validators: [
         { name: "required", config: { message: "Amount is required" } },
-        { name: "is_number", config: { message: "Amount must be a number" } },
         { name: "greater_than", config: { value: 0, message: "Amount must be greater than 0" } }
       ]
     }
@@ -122,7 +121,7 @@ export class PaystackVerifyWorkflow {
 
   @Validator([
     {
-      fields: [v.pathParam("reference")],
+      fields: [v.body("reference")],
       validators: [
         { name: "required", config: { message: "Transaction reference is required" } }
       ]

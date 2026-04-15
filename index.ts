@@ -37,9 +37,9 @@ app.post('/api/paystack/initialize', async (req: Request, res: Response) => {
 
 app.get('/api/paystack/verify/:reference', async (req: Request, res: Response) => {
     const result = await paystackFlosync.run('paystack-verify', {
+      body: { reference: req.params.reference },
       pathParams: { reference: req.params.reference },
       headers: req.headers as Record<string, string>,
-      query: req.query as Record<string, any>
     });
     res.json(result);
 });
