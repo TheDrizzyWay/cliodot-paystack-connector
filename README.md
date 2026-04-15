@@ -7,10 +7,15 @@ The implementation leverages the Cliodot SDK's powerful workflow engine to creat
 
 ## Architecture & Approach
 **Technology Stack**
+
 Runtime: Node.js
+
 Framework: Express.js
+
 Language: TypeScript
+
 SDK: Cliodot Flowsync v1.1.0
+
 Payment Gateway: Paystack API
 
 ## Key Design Decisions
@@ -35,15 +40,18 @@ All business logic leverages Cliodot's built-in capabilities:
 
 ## Installation & Setup
 **Prerequisites**
+
 Node.js 16+
+
 npm or yarn
+
 Paystack account (test keys)
 
 ## Installation Steps
 1. Clone the repository
 ```
 git clone <repository-url>
-cd paystack-cliodot-integration
+cd cliodot-paystack-connector
 ```
 
 2. Install dependencies
@@ -85,10 +93,14 @@ Request Body:
 Verifies the status of a completed payment transaction.
 
 Endpoint: **GET** /api/paystack/verify/:reference
+
 URL Parameters:
+
 reference (string): Transaction reference from initialization response
 
 
 ##References
+
 [Cliodot SDK Documentation](https://docs.cliodot.com/docs/sdk-reference)
+
 [Paystack API Documentation](https://paystack.com/docs/api)
