@@ -99,8 +99,6 @@ URL Parameters:
 reference (string): Transaction reference from initialization response
 
 
-##References
-
-[Cliodot SDK Documentation](https://docs.cliodot.com/docs/sdk-reference)
-
-[Paystack API Documentation](https://paystack.com/docs/api)
+## References
+- [Cliodot SDK Documentation](https://docs.cliodot.com/docs/sdk-reference)
+- [Paystack API Documentation](https://paystack.com/docs/api)
