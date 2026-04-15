@@ -1,15 +1,14 @@
 import { Flosync } from 'cliodot';
-import dotenv from 'dotenv';
+import { FLOSYNC_API_KEY, FLOSYNC_API_SECRET, NODE_ENV } from './env-vars';
 
-dotenv.config();
 
 const paystackFlosync = new Flosync();
 
 // Configure Cliodot SDK
 paystackFlosync.configure({
-  debug: process.env.NODE_ENV === 'development',
-  apiKey: process.env.FLOSYNC_API_KEY,
-  apiSecret: process.env.FLOSYNC_API_SECRET,
+  debug: NODE_ENV === 'development',
+  apiKey: FLOSYNC_API_KEY,
+  apiSecret: FLOSYNC_API_SECRET,
 });
 
 export default paystackFlosync;

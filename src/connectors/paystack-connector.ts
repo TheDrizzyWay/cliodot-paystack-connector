@@ -5,9 +5,7 @@ import {
   ConnectorPathParams, 
 } from 'cliodot';
 import paystackFlosync from '../config/flosync-config';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import { PAYSTACK_SECRET_KEY } from '../config/env-vars';
 
 // Define typed Paystack connector with schema validation
 export const PaystackConnector = defineTypedConnector("paystack", {
@@ -61,7 +59,7 @@ export function registerPaystackConnector() {
     base_url: 'https://api.paystack.co',
     auth: { 
       type: 'bearer' as const, 
-      token: process.env.PAYSTACK_SECRET_KEY || '',
+      token: PAYSTACK_SECRET_KEY || '',
       header_name: 'Authorization',
       prefix: 'Bearer '
     },
